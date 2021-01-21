@@ -9,7 +9,7 @@ import org.junit.*
 
 @Param.Params(
     Param(name = "index", gen = IntGen::class, conf = "0:4"),
-    Param(name = "value", gen = IntGen::class, conf = "1:3")
+    Param(name = "value", gen = IntGen::class, conf = "0:1")
 )
 class AtomicArrayTest {
     private val a = AtomicArray<Int>(5)
