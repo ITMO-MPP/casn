@@ -8,7 +8,7 @@ import org.jetbrains.kotlinx.lincheck.verifier.*
 import org.junit.*
 
 @Param.Params(
-    Param(name = "index", gen = IntGen::class, conf = "0:4"),
+    Param(name = "index", gen = IntGen::class, conf = "0:3"),
     Param(name = "value", gen = IntGen::class, conf = "0:1")
 )
 class AtomicArrayTest {
