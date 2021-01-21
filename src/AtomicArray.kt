@@ -1,7 +1,11 @@
 import kotlinx.atomicfu.*
 
-class AtomicArray<E>(size: Int) {
+class AtomicArray<E>(size: Int, initialValue: E) {
     private val a = atomicArrayOfNulls<E>(size)
+
+    init {
+        for (i in 0 until size) a[i].value = initialValue
+    }
 
     fun get(index: Int) =
         a[index].value
